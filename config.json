@@ -1,0 +1,7 @@
+{
+  "httpPort"      : "",
+  "databaseFile"  : "./example.db",
+  "availableTasks": [
+    "echo"
+  ]
+}
