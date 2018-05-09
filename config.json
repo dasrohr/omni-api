@@ -1,6 +1,6 @@
 {
   "httpPort"      : "",
-  "databaseFile"  : "./example.db",
+  "databaseFile"  : "./omni.db",
   "availableTasks": [
     "echo"
   ]
