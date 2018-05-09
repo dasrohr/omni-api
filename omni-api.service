@@ -1,0 +1,12 @@
+[Unit]
+Description=omni-API
+
+[Service]
+ExecStart=/path/to/omni-api/omni-api
+Restart=always
+Environment=PATH=/usr/bin:/usr/local/bin
+WorkingDirectory=/path/to/omni-api/
+
+[Install]
+WantedBy=multi-user.target
+
