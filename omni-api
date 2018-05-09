@@ -3,13 +3,22 @@
 var app = require('./lib/routes');
 var config = require('./config.json');
 
-var port = config.httpPort;
+var port = config.httpPort || 3000;
 
 // Which port to listen on
-app.set('port', port || 3000);
+app.set('port', port);
 
 // Start listening for HTTP requests
 var server = app.listen(app.get('port'), function() {
+ 
   var port = server.address().port;
   console.log('Example app listening at :%s', port);
+});
+server.on('error', function(err) {
+  if (err.code === 'EADDRINUSE') {
+    console.log('port %s is already in use!', port);
+  } else {
+    console.log('unkown error while launching server!')
+  }
+  process.exit(1);
 });
