@@ -2,6 +2,7 @@
   "httpPort"      : "",
   "databaseFile"  : "./omni.db",
   "availableTasks": [
-    "echo"
+    "echo",
+    "download"
   ]
 }

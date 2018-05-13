@@ -9,10 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "better-sqlite3": "^4.1.0",
     "body-parser": "^1.18.2",
     "child_process": "^1.0.2",
     "express": "^4.16.3",
-    "node-celery": "^0.2.8",
-    "sqlite3": "^4.0.0"
+    "node-celery": "^0.2.8"
   }
 }
