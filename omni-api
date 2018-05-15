@@ -10,9 +10,8 @@ app.set('port', port);
 
 // Start listening for HTTP requests
 var server = app.listen(app.get('port'), function() {
- 
   var port = server.address().port;
-  console.log('Example app listening at :%s', port);
+  console.log('API listening at :%s', port);
 });
 server.on('error', function(err) {
   if (err.code === 'EADDRINUSE') {
