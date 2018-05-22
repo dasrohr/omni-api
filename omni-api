@@ -1,17 +1,16 @@
 #!/usr/bin/env node
 
-var app = require('./lib/routes');
-var config = require('./config.json');
+const loadConfig = require( 'read-config' )
+    , config     = loadConfig( './config.yml' );
 
-var port = config.httpPort || 3000;
+const app        = require('./lib/routes');
 
-// Which port to listen on
-app.set('port', port);
+const address = config.http.address || '0.0.0.0';
+const port = config.http.port || 3000;
 
 // Start listening for HTTP requests
-var server = app.listen(app.get('port'), function() {
-  var port = server.address().port;
-  console.log('API listening at :%s', port);
+const server = app.listen(port, address, function() {
+  console.log('API listening at %s:%s', address, port);
 });
 server.on('error', function(err) {
   if (err.code === 'EADDRINUSE') {
