@@ -19,3 +19,6 @@ celery:
   availableTasks: [ echo, download ]
   broker: amqp://
   backend: amqp://
+
+path:
+  plexRoot: /tmp/plex
