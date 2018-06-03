@@ -2,6 +2,7 @@ node_modules/**
 __pycache__/**
 
 *.db
+*.pyc
 test.py
 test.js
 config.yml
